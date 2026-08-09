@@ -1,0 +1,1 @@
+export default function robots(){return {rules:{userAgent:"*",allow:"/"},sitemap:"https://wientransport.at/sitemap.xml",host:"https://wientransport.at"};}

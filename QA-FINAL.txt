@@ -1,0 +1,9 @@
+Final QA:
+- Phone number everywhere: +436608624444
+- WhatsApp target: 436608624444
+- 5 language routes: DE/EN/TR/RU/AR
+- Form placeholders/options translated
+- Coverage, price, parcel hint and final CTA translated
+- One professional vehicle image in hero
+- Sitemap/robots/SEO service pages present
+- Impressum and Datenschutz present

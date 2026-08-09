@@ -1,0 +1,169 @@
+"use client";
+import Link from "next/link";
+import {translations} from "../data";
+
+const LANGS = [
+  ["de","DE","🇩🇪","/"],
+  ["en","EN","🇬🇧","/en"],
+  ["tr","TR","🇹🇷","/tr"],
+  ["ru","RU","🇷🇺","/ru"],
+  ["ar","AR","🇸🇦","/ar"]
+];
+
+const SERVICE_LINKS = [
+  "/umzug-wien",
+  "/moebeltransport-wien",
+  "/kleintransport-wien",
+  "/moebelmontage-wien",
+  "/firmenumzug-wien",
+  "/entruempelung-wien"
+];
+
+export default function Site({lang="de"}) {
+  const t = translations[lang] || translations.de;
+  const rtl = lang === "ar";
+  const phone = "436608624444";
+
+  function submit(e){
+    e.preventDefault();
+    const f = new FormData(e.currentTarget);
+    const msg = [
+      "WIEN TRANSPORT",
+      "",
+      `Service: ${f.get("service")}`,
+      `Pickup: ${f.get("pickup")}`,
+      `Destination: ${f.get("destination")}`,
+      `Date: ${f.get("date") || "-"}`,
+      `Phone: ${f.get("phone")}`,
+      `Details: ${f.get("details") || "-"}`
+    ].join("\n");
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,"_blank","noopener,noreferrer");
+  }
+
+  return <main dir={rtl?"rtl":"ltr"}>
+    <header>
+      <Link className="brand" href={lang==="de"?"/":`/${lang}`}>
+        <span>WT</span><div><b>WIEN TRANSPORT</b><small>UMZUG · TRANSPORT · KURIER</small></div>
+      </Link>
+      <nav>
+        <a href="#services">{t.nav[0]}</a><a href="#parcel">{t.nav[1]}</a>
+        <a href="#europe">{t.nav[2]}</a><a href="#quote">{t.nav[3]}</a><a href="#contact">{t.nav[4]}</a>
+      </nav>
+      <div className="langs">
+        {LANGS.map(([l,code,flag,href])=>
+          <Link key={l} href={href} className={l===lang?"active":""}><span>{code}</span><span>{flag}</span></Link>
+        )}
+      </div>
+    </header>
+
+    <section className="hero">
+      <div className="heroText">
+        <p className="eyebrow">UMZUG · MÖBEL · KURIER</p>
+        <h1>{t.hero}</h1>
+        <p>{t.sub}</p>
+        <div className="actions">
+          <a className="primary" href="#quote">{t.cta}</a>
+          <a className="secondary" href={`https://wa.me/${phone}`} target="_blank" rel="noreferrer">WhatsApp</a>
+        </div>
+        <div className="trust"><b>24/7</b><span>Wien · Österreich · Europa</span></div>
+      </div>
+      <div className="van"><img src="/wientransport-van.jpg" alt="Wien Transport Fahrzeug"/></div>
+    </section>
+
+
+    <section className="coverageBar">
+      {t.coverage.map(([a,b])=><div key={a}><strong>{a}</strong><span>{b}</span></div>)}
+    </section>
+
+    <section id="services" className="section">
+      <div className="head"><div><p className="eyebrow">WIEN TRANSPORT</p><h2>{t.services}</h2></div><p>{t.sub}</p></div>
+      <div className="grid">
+        {t.items.map(([a,b],i)=>
+          <article key={a}>
+            <span>0{i+1}</span><h3>{a}</h3><p>{b}</p>
+            {lang==="de" && <Link className="cardLink" href={SERVICE_LINKS[i]}>Mehr erfahren →</Link>}
+          </article>
+        )}
+      </div>
+    </section>
+
+    <section id="parcel" className="section dark">
+      <div className="head"><div><p className="eyebrow">PAKET · KURIER</p><h2>{t.parcel}</h2></div><p>Brief · Dokument · Paket · Österreich · Europa</p></div>
+      <div className="parcel">
+        {t.pitems.map(([a,b])=><article key={a}><h3>{a}</h3><p>{b}</p></article>)}
+      </div>
+
+      <div className="parcelHint">
+        <strong>{t.parcelHintTitle}</strong>
+        <span>{t.parcelHintText}</span>
+      </div>
+
+      {lang==="de" && <div className="sectionCta"><Link href="/kurierdienst-wien">Kurierdienst Wien →</Link><Link href="/pakettransport-europa">Pakettransport Europa →</Link></div>}
+    </section>
+
+    <section id="europe" className="section europe">
+      <p className="eyebrow">EUROPAWEIT</p><h2>{t.europe}</h2>
+      <p>Wien · Graz · Salzburg · München · Prag · Bratislava · Budapest · Europa</p>
+    </section>
+
+
+    <section className="section pricingSection" id="preise">
+      <div className="head">
+        <div><p className="eyebrow">{t.priceEyebrow}</p><h2>{t.priceTitle}</h2></div>
+        <p>{t.priceIntro}</p>
+      </div>
+      <div className="priceGrid">
+        {t.priceCards.map(([a,b,c])=><article key={a}><span>{a}</span><h3>{b}</h3><p>{c}</p><a href="#quote">{t.priceAsk}</a></article>)}
+      </div>
+      <p className="priceNote">{t.priceNote}</p>
+    </section>
+
+    <section className="section processSection">
+      <div className="head"><div><p className="eyebrow">ABLAUF</p><h2>{t.processTitle}</h2></div></div>
+      <div className="processGrid">
+        {t.process.map(([n,a,b])=><article key={n}><span>{n}</span><h3>{a}</h3><p>{b}</p></article>)}
+      </div>
+    </section>
+
+    <section id="quote" className="quote">
+      <div><p className="eyebrow">ANGEBOT</p><h2>{t.quote}</h2><p>+436608624444<br/>aa66tx@gmail.com</p></div>
+      <form onSubmit={submit}>
+        <select name="service" required defaultValue=""><option value="" disabled>{t.formLabels.service}</option>
+          {t.serviceOptions.map(x=><option key={x}>{x}</option>)}
+        </select>
+        <input name="pickup" placeholder={t.formLabels.pickup} required/>
+        <input name="destination" placeholder={t.formLabels.destination} required/>
+        <input name="date" type="date"/><input name="phone" placeholder={t.formLabels.phone} required/>
+        <textarea name="details" rows="4" placeholder={t.formLabels.details}/>
+        <button>{t.send}</button>
+      </form>
+    </section>
+
+    <section className="section faqSection">
+      <div className="head"><div><p className="eyebrow">FAQ</p><h2>{t.faqTitle}</h2></div></div>
+      <div className="faqList">
+        {t.faq.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}
+      </div>
+    </section>
+
+
+    <section className="finalCta">
+      <div>
+        <p className="eyebrow">WIEN TRANSPORT</p>
+        <h2>{t.finalTitle}</h2>
+        <p>{t.finalText}</p>
+      </div>
+      <div className="finalCtaActions">
+        <a className="primary" href="#quote">{t.cta}</a>
+        <a className="secondary" href={`tel:+${phone}`}>+436608624444</a>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div><b>WIEN TRANSPORT</b><p>Tokiostraße 3/1/14<br/>1220 Wien<br/>Österreich</p></div>
+      <div><b>Kontakt</b><a href="tel:+436608624444">+436608624444</a><a href="mailto:aa66tx@gmail.com">aa66tx@gmail.com</a><a href={`https://wa.me/${phone}`} target="_blank" rel="noreferrer">WhatsApp</a></div>
+      <div><b>Service</b><p>24/7<br/>Wien · Österreich · Europa</p><Link href="/impressum">Impressum</Link><Link href="/datenschutz">Datenschutz</Link></div>
+    </footer>
+    <a className="float" href={`https://wa.me/${phone}`} target="_blank" rel="noreferrer">WhatsApp</a>
+  </main>
+}

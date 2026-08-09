@@ -1,0 +1,15 @@
+WIEN TRANSPORT – READY TO PUBLISH
+
+Recommended deployment:
+1. Upload this project to GitHub.
+2. Import the repository into Vercel.
+3. Add wientransport.at and www.wientransport.at as domains in Vercel.
+4. Copy Vercel's DNS values into Hostinger DNS.
+5. After DNS is active, verify:
+   https://wientransport.at
+   https://wientransport.at/sitemap.xml
+   https://wientransport.at/robots.txt
+6. Add the domain property to Google Search Console and submit sitemap.xml.
+
+IMPORTANT BEFORE FINAL BUSINESS LAUNCH:
+The Impressum page still needs the actual legal owner/company details and any applicable Austrian business identifiers. These were not invented because they have not been supplied.

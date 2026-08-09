@@ -1,0 +1,4 @@
+Wien Transport tasarimi Transfer Wien ile ayni gorsel dile uyarlandi.
+Renkler: #070b0e siyah, #ff6500 turuncu, #f7f7f4 beyaz.
+Govde yazisi: Arial/Helvetica. Basliklar: Georgia/Times New Roman.
+Turuncu glow, cizgiler, butonlar, kartlar ve navigasyon Transfer Wien stilinde.

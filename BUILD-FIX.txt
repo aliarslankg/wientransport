@@ -1,0 +1,11 @@
+Fixed JSX array props on service SEO pages.
+app/moebelmontage-wien/page.js
+app/kleintransport-wien/page.js
+app/firmenumzug-wien/page.js
+app/entruempelung-wien/page.js
+app/pakettransport-europa/page.js
+app/kurierdienst-wien/page.js
+app/umzug-wien/page.js
+app/moebeltransport-wien/page.js
+
+Note: local npm build could not be executed in this environment because its internal npm mirror does not provide next@14.2.35. The exact syntax error reported by Vercel was repaired across all affected service pages.

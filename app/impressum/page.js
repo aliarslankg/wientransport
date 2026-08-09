@@ -1,0 +1,5 @@
+import Link from "next/link";
+export const metadata={title:"Impressum | Wien Transport",alternates:{canonical:"https://wientransport.at/impressum"}};
+export default function Page(){return <main><header><Link className="brand" href="/"><span>WT</span><div><b>WIEN TRANSPORT</b><small>UMZUG · TRANSPORT · KURIER</small></div></Link><nav><Link href="/">Startseite</Link><Link href="/#contact">Kontakt</Link></nav></header><section className="serviceHero"><div><p className="eyebrow">WIEN TRANSPORT</p><h1>Impressum</h1></div></section><section className="section seoText"><h2>Wien Transport</h2><p>Tokiostraße 3/1/14, 1220 Wien, Österreich</p></section>
+<section className="section seoText"><h2>Kontakt</h2><p>Telefon: +436608624444</p><p>E-Mail: aa66tx@gmail.com</p></section>
+<section className="section seoText"><h2>Hinweis</h2><p>Weitere gesetzlich erforderliche Unternehmensangaben (z. B. vollständiger Unternehmensname/Inhaber, Rechtsform, Firmenbuch- oder Gewerbedaten, soweit anwendbar) müssen vor dem endgültigen Livegang mit den tatsächlichen Unternehmensdaten ergänzt werden.</p></section></main>}

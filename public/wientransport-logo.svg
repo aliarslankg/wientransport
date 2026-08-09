@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120">
+  <rect width="520" height="120" rx="18" fill="#070b0e"/>
+  <path d="M25 20h64l10 14-7 58-35 18-35-18-7-58z" fill="none" stroke="#ff6500" stroke-width="5"/>
+  <text x="29" y="75" font-family="Arial,Helvetica,sans-serif" font-size="35" font-weight="900" fill="#ff6500">WT</text>
+  <text x="122" y="57" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="900" fill="#f7f7f4">WIEN TRANSPORT</text>
+  <text x="123" y="82" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" letter-spacing="3" fill="#ff6500">UMZUG · TRANSPORT · KURIER</text>
+</svg>
