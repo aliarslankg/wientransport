@@ -55,7 +55,7 @@ export default function QuoteForm({t, phone}) {
       "",
       "*UMFANG*",
       `Personen/Tragehilfe: ${value("helpers")}`,
-      `Eşyalar / Gegenstände: ${value("inventory")}`,
+      `Gegenstände: ${value("inventory")}`,
       `Weitere Angaben: ${value("details")}`,
       "",
       "*KONTAKT*",
@@ -128,7 +128,7 @@ export default function QuoteForm({t, phone}) {
     <label><span>Telefonnummer *</span><input name="phone" type="tel" autoComplete="tel" placeholder="+43 ..." required/></label>
     <label><span>E-Mail (optional)</span><input name="email" type="email" autoComplete="email"/></label>
 
-    <label className="wide"><span>Eşyalar / Gegenstände *</span><textarea name="inventory" rows="4" placeholder="z. B. Sofa, Schrank, Bett, 15 Kartons …" required/></label>
+    <label className="wide"><span>Gegenstände *</span><textarea name="inventory" rows="4" placeholder="z. B. Sofa, Schrank, Bett, 15 Kartons …" required/></label>
     <label className="wide"><span>Weitere Angaben</span><textarea name="details" rows="3" placeholder="Maße, Gewicht, Demontage/Montage, Parkmöglichkeit, langer Trageweg …"/></label>
 
     <div className="photoUpload wide">
