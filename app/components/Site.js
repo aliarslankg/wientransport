@@ -20,10 +20,19 @@ const SERVICE_LINKS = [
   "/entruempelung-wien"
 ];
 
+const QUOTE_LEAD = {
+  de:["Fotos und Transportdaten senden – wir prüfen alles und melden uns mit einem individuellen Preis.","Direkter Kontakt"],
+  en:["Send photos and transport details – we review everything and reply with an individual price.","Direct contact"],
+  tr:["Fotoğrafları ve taşıma bilgilerini gönderin – her şeyi inceleyip size özel fiyatla dönüş yapalım.","Doğrudan iletişim"],
+  ru:["Отправьте фотографии и данные о перевозке — мы всё проверим и сообщим индивидуальную цену.","Прямая связь"],
+  ar:["أرسل الصور وتفاصيل النقل — سنراجعها ونرسل لك سعراً مخصصاً.","تواصل مباشر"]
+};
+
 export default function Site({lang="de"}) {
   const t = translations[lang] || translations.de;
   const rtl = lang === "ar";
   const phone = "436608624444";
+  const quoteLead = QUOTE_LEAD[lang] || QUOTE_LEAD.de;
 
   return <main dir={rtl?"rtl":"ltr"}>
     <header>
@@ -111,8 +120,8 @@ export default function Site({lang="de"}) {
     </section>
 
     <section id="quote" className="quote">
-      <div className="quoteLead"><p className="eyebrow">ANGEBOT</p><h2>{t.quote}</h2><p>Fotos und Transportdaten senden – wir prüfen alles und melden uns mit einem individuellen Preis.</p><div className="quoteContact"><b>Direkter Kontakt</b><a href="tel:+436608624444">+43 660 862 44 44</a><a href="mailto:aa66tx@gmail.com">aa66tx@gmail.com</a></div></div>
-      <QuoteForm t={t} phone={phone}/>
+      <div className="quoteLead"><p className="eyebrow">ANGEBOT</p><h2>{t.quote}</h2><p>{quoteLead[0]}</p><div className="quoteContact"><b>{quoteLead[1]}</b><a href="tel:+436608624444">+43 660 862 44 44</a><a href="mailto:aa66tx@gmail.com">aa66tx@gmail.com</a></div></div>
+      <QuoteForm t={t} phone={phone} lang={lang}/>
     </section>
 
     <section className="section faqSection">
