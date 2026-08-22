@@ -249,6 +249,33 @@ nav a:hover::after{transform:scaleX(1);opacity:1}
   background:linear-gradient(145deg,#11171c,#0b1014);
   box-shadow:0 22px 55px rgba(0,0,0,.28)
 }
+.quoteLead{position:sticky;top:105px}
+.quoteContact{display:flex;flex-direction:column;gap:7px;margin-top:24px;padding:16px;border-left:2px solid var(--orange);background:rgba(255,101,0,.04)}
+.quoteContact b{color:var(--orange);font-size:10px;text-transform:uppercase;letter-spacing:.08em}
+.quoteContact a{font-size:13px;color:#d5d9dc}
+.quote .quoteForm{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:22px}
+.quoteForm label{display:flex;flex-direction:column;gap:7px;min-width:0}
+.quoteForm label>span,.photoUpload>div>span{color:#b6bdc2;font-size:10px;line-height:1.45}
+.quoteForm fieldset{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0;padding:15px;border:1px solid rgba(255,255,255,.12);border-radius:8px}
+.quoteForm legend{padding:0 8px;color:var(--orange);font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.07em}
+.quoteForm .wide{grid-column:1/-1}
+.formIntro{grid-column:1/-1;display:flex;flex-direction:column;gap:5px;padding-bottom:4px}
+.formIntro strong{font-size:16px}
+.formIntro span{color:#aeb5ba;font-size:11px;line-height:1.5}
+.photoUpload{padding:15px;border:1px dashed rgba(255,101,0,.48);border-radius:8px;background:rgba(255,101,0,.035)}
+.photoUpload>div:first-child{display:flex;flex-direction:column;gap:4px}
+.uploadButton{margin-top:12px;min-height:40px;padding:0 15px;border:1px solid var(--orange);border-radius:7px;background:transparent;color:#fff;font-weight:900}
+.photoGrid{display:grid!important;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}
+.photoGrid figure{position:relative;aspect-ratio:1;margin:0;overflow:hidden;border-radius:7px;background:#05080b}
+.photoGrid img{width:100%;height:100%;object-fit:cover}
+.photoGrid button{position:absolute;top:4px;right:4px;width:25px;height:25px;border:0;border-radius:50%;background:rgba(0,0,0,.8);color:#fff;font-size:18px;line-height:1}
+.quoteForm .consent{display:grid;grid-template-columns:auto 1fr;align-items:start;gap:9px}
+.quoteForm .consent input{width:17px;min-height:17px;margin:1px 0 0;accent-color:var(--orange)}
+.quoteForm .consent a{color:var(--orange);text-decoration:underline}
+.formNotice{margin:0;padding:10px 12px;border-radius:7px;background:rgba(255,101,0,.10);color:#ffd2b3;font-size:11px;line-height:1.45}
+.quoteForm .submitQuote{min-height:50px}
+.quoteForm .submitQuote:disabled{opacity:.65;cursor:wait}
+.formFootnote{margin:0;color:#889198;font-size:9px;line-height:1.5;text-align:center}
 .quote input,.quote select,.quote textarea{
   width:100%;min-height:44px;
   padding:0 12px;
@@ -309,6 +336,7 @@ main[dir="rtl"] footer b::after{left:auto;right:0}
   .grid{grid-template-columns:repeat(2,1fr)}
   .parcel{grid-template-columns:repeat(2,1fr)}
   .quote{grid-template-columns:1fr}
+  .quoteLead{position:static}
 }
 
 /* MOBILE */
@@ -340,6 +368,10 @@ main[dir="rtl"] footer b::after{left:auto;right:0}
   .grid article,.parcel article{min-height:0}
   .quote form{grid-template-columns:1fr}
   .quote textarea,.quote button{grid-column:auto}
+  .quote .quoteForm{grid-template-columns:1fr}
+  .quoteForm fieldset{grid-template-columns:1fr}
+  .quoteForm .wide,.quoteForm fieldset,.formIntro{grid-column:auto}
+  .photoGrid{grid-template-columns:repeat(3,1fr)}
   footer{grid-template-columns:1fr;padding:28px 18px}
 }
 
