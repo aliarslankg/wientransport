@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import {translations} from "../data";
+import QuoteForm from "./QuoteForm";
 
 const LANGS = [
   ["de","DE","🇩🇪","/"],
@@ -23,22 +24,6 @@ export default function Site({lang="de"}) {
   const t = translations[lang] || translations.de;
   const rtl = lang === "ar";
   const phone = "436608624444";
-
-  function submit(e){
-    e.preventDefault();
-    const f = new FormData(e.currentTarget);
-    const msg = [
-      "WIEN TRANSPORT",
-      "",
-      `Service: ${f.get("service")}`,
-      `Pickup: ${f.get("pickup")}`,
-      `Destination: ${f.get("destination")}`,
-      `Date: ${f.get("date") || "-"}`,
-      `Phone: ${f.get("phone")}`,
-      `Details: ${f.get("details") || "-"}`
-    ].join("\n");
-    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,"_blank","noopener,noreferrer");
-  }
 
   return <main dir={rtl?"rtl":"ltr"}>
     <header>
@@ -126,17 +111,8 @@ export default function Site({lang="de"}) {
     </section>
 
     <section id="quote" className="quote">
-      <div><p className="eyebrow">ANGEBOT</p><h2>{t.quote}</h2><p>+436608624444<br/>aa66tx@gmail.com</p></div>
-      <form onSubmit={submit}>
-        <select name="service" required defaultValue=""><option value="" disabled>{t.formLabels.service}</option>
-          {t.serviceOptions.map(x=><option key={x}>{x}</option>)}
-        </select>
-        <input name="pickup" placeholder={t.formLabels.pickup} required/>
-        <input name="destination" placeholder={t.formLabels.destination} required/>
-        <input name="date" type="date"/><input name="phone" placeholder={t.formLabels.phone} required/>
-        <textarea name="details" rows="4" placeholder={t.formLabels.details}/>
-        <button>{t.send}</button>
-      </form>
+      <div className="quoteLead"><p className="eyebrow">ANGEBOT</p><h2>{t.quote}</h2><p>Fotos und Transportdaten senden – wir prüfen alles und melden uns mit einem individuellen Preis.</p><div className="quoteContact"><b>Direkter Kontakt</b><a href="tel:+436608624444">+43 660 862 44 44</a><a href="mailto:aa66tx@gmail.com">aa66tx@gmail.com</a></div></div>
+      <QuoteForm t={t} phone={phone}/>
     </section>
 
     <section className="section faqSection">
