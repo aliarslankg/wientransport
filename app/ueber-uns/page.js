@@ -2,7 +2,7 @@ import Link from "next/link";
 export const metadata={
   title:"Über Wien Transport | Umzug & Transport Wien",
   description:"Wien Transport ist Ihr direkter Ansprechpartner für Umzug, Möbeltransport, Kleintransport, Kurier und Pakettransport in Wien, Österreich und Europa.",
-  alternates:{canonical:"https://wientransport.at/ueber-uns"}
+  alternates:{canonical:"https://www.wientransport.at/ueber-uns"}
 };
 export default function Page(){
  return <main>
