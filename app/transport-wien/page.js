@@ -1,28 +1,3 @@
-﻿import ServicePage from "../components/ServicePage";
-
-export const metadata = {
-  title: "Transport Wien | Umzug, Möbeltransport & Kurier",
-  description: "Transport Wien für Umzug, Möbeltransport, Kleintransport und Kurierdienst. Schnell, zuverlässig und flexibel in Wien, Österreich und Europa.",
-  alternates: {
-    canonical: "https://wientransport.at/transport-wien"
-  }
-};
-
-export default function Page() {
-  return (
-    <ServicePage
-      eyebrow="TRANSPORT WIEN"
-      title="Transport Wien – schnell, zuverlässig und flexibel"
-      intro="Professionelle Transporte für Privatpersonen und Unternehmen in Wien, Österreich und Europa."
-      points={[
-        ["Umzug & Möbeltransport", "Sichere Transporte für Wohnungen, Häuser, Büros und einzelne Möbelstücke."],
-        ["Kleintransport & Kurier", "Flexible Lösungen für kleinere Transporte, Pakete und kurzfristige Zustellungen."],
-        ["Wien & Europa", "Transporte innerhalb Wiens sowie österreich- und europaweit individuell planbar."]
-      ]}
-      sections={[
-        ["Professioneller Transport in Wien", "Wien Transport bietet zuverlässige Transportlösungen für private und gewerbliche Kunden. Von einzelnen Möbelstücken bis zum kompletten Umzug planen wir jeden Auftrag individuell."],
-        ["Schnell und unkompliziert anfragen", "Senden Sie uns Abholort, Zieladresse und Informationen zum Transport bequem über WhatsApp. Wir erstellen Ihnen ein individuelles Angebot."]
-      ]}
-    />
-  );
-}
+import ServicePage from "../components/ServicePage";
+export const metadata={title:"Transport Wien | Umzug, Möbel & Kleintransport",description:"Transport in Wien für Umzug, Möbel, kleine Ladungen und Firmen. Individuelles Angebot für Wien, Österreich und Europa anfragen.",alternates:{canonical:"https://wientransport.at/transport-wien"}};
+export default function Page(){return <ServicePage eyebrow="TRANSPORT WIEN" title="Transport Wien – passend zu Ladung, Strecke und Termin" intro="Transportlösungen für Privatpersonen und Unternehmen in Wien, Österreich und Europa – vom einzelnen Möbelstück bis zur kompletten Übersiedlung." points={[["Umzug & Möbel","Für Wohnungen, Büros, Einrichtungen und einzelne Möbelstücke."],["Kleintransport","Für Kartons, Geräte, Waren und kleine Ladungen mit direkter Zustellung."],["Wien & Europa","Lokale, nationale und europaweite Fahrten werden individuell geplant."]]} sections={[["Welcher Transport passt zu Ihrem Auftrag?","Teilen Sie uns mit, was transportiert werden soll, wie groß und schwer die Ladung ist und ob Helfer, Demontage oder Montage benötigt werden. Danach wählen wir den passenden Leistungsumfang."],["Angaben für die Preisberechnung","Abhol- und Zieladresse, Termin, Maße, Gewicht, Fotos, Stockwerke, Aufzug und Tragewege sind die wichtigsten Angaben. Zusatzstopps und Wartezeiten müssen ebenfalls berücksichtigt werden."],["Transport für Privat und Unternehmen","Wir bearbeiten Anfragen für private Möbel- und Kleintransporte ebenso wie Büro-, Praxis- und Firmentransporte. Umfang und Zeitfenster werden vor Auftragsbestätigung abgestimmt."],["Österreich und Europa","Für längere Strecken benötigen wir vollständige Adressen, ein realistisches Zeitfenster und genaue Angaben zur Ladung. Maut, Strecke und Fahrzeugbedarf fließen in das individuelle Angebot ein."]]} faqs={[["Welche Transporte kann ich anfragen?","Umzüge, Möbeltransporte, Kleintransporte, Firmenumzüge und ergänzende Transportleistungen nach individueller Prüfung."],["Wie schnell erhalte ich ein Angebot?","Je vollständiger Adressen, Termin, Maße, Gewicht und Fotos sind, desto schneller kann die Anfrage geprüft werden."],["Sind europaweite Transporte möglich?","Ja, europaweite Fahrten können mit vollständigen Transportdaten individuell angefragt werden."],["Gibt es einen Fixpreis?","Nach Prüfung des vereinbarten Umfangs kann ein individuelles Angebot erstellt werden. Änderungen am Auftrag können den Preis verändern."],["Kann ich Helfer dazubuchen?","Benötigte Tragehelfer müssen in der Anfrage angegeben und im Angebot bestätigt werden."]]}/>;}
