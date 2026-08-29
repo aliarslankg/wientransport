@@ -462,3 +462,29 @@ main[dir="rtl"] footer b::after{left:auto;right:0}
   border:1px solid rgba(255,101,0,.20);
   box-shadow:0 28px 60px rgba(0,0,0,.55);
 }
+
+
+/* Accessibility: stronger contrast and 44px mobile touch targets */
+.quoteContact a,
+footer a{
+  display:flex;
+  align-items:center;
+  width:fit-content;
+  min-height:44px;
+  padding:8px 0;
+  color:#e1e5e8;
+}
+.formFootnote,
+.priceNote{color:#b8c0c6}
+.langs a{
+  min-width:44px;
+  min-height:44px;
+  justify-content:center;
+}
+@media(max-width:700px){
+  footer div{gap:0}
+  footer p{color:#c7cdd1}
+  footer a{min-width:44px}
+  .quoteContact{gap:0}
+  .quoteContact a{min-width:44px}
+}
