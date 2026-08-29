@@ -1,33 +1,38 @@
-﻿import "./globals.css";
+import "./globals.css";
 
 export const metadata = {
   metadataBase: new URL("https://wientransport.at"),
-  title: "Umzug Wien & Möbeltransport | Wien Transport",
-  description: "Wien Transport: Umzug Wien, Möbeltransport, Kleintransport, Möbelmontage, Entrümpelung, Paket- und Kurierdienst in Österreich und ganz Europa. 24/7 erreichbar.",
+  title: { default:"Umzug Wien & Möbeltransport | Wien Transport", template:"%s | Wien Transport" },
+  description: "Wien Transport: Umzug Wien, Möbeltransport, Kleintransport, Möbelmontage und Entrümpelung in Wien, Österreich und Europa. Unverbindlich anfragen.",
   keywords: ["Umzug Wien","Möbeltransport Wien","Kleintransport Wien","Möbeltaxi Wien","Kurierdienst Wien","Pakettransport Wien","Firmenumzug Wien","Möbelmontage Wien"],
-  alternates: { canonical: "https://wientransport.at/", languages: { de:"https://wientransport.at/", en:"https://wientransport.at/en", tr:"https://wientransport.at/tr", ru:"https://wientransport.at/ru", ar:"https://wientransport.at/ar" } },
+  alternates: { canonical: "https://wientransport.at/", languages: { "de-AT":"https://wientransport.at/", en:"https://wientransport.at/en", tr:"https://wientransport.at/tr", ru:"https://wientransport.at/ru", ar:"https://wientransport.at/ar", "x-default":"https://wientransport.at/" } },
   openGraph: {
-    title: "Wien Transport – Umzug, Möbeltransport & Kurier",
-    description: "Umzug, Möbeltransport, Kleintransport, Paket & Kurier in Wien, Österreich und Europa.",
+    title: "Wien Transport – Umzug, Möbeltransport & Kleintransport",
+    description: "Umzug, Möbeltransport, Kleintransport und ergänzende Leistungen in Wien, Österreich und Europa.",
     url: "https://wientransport.at/",
     siteName: "Wien Transport",
-    images: [{ url: "/wientransport-van.jpg", width: 900, height: 560, alt: "Wien Transport Umzug und Möbeltransport" }],
+    locale:"de_AT",
+    images: [{ url: "/wientransport-van.jpg", width: 900, height: 560, alt: "Wien Transport Fahrzeug für Umzug und Möbeltransport" }],
     type: "website"
   },
-  robots: { index: true, follow: true }
+  twitter:{card:"summary_large_image",title:"Wien Transport – Umzug & Möbeltransport",description:"Transportlösungen in Wien, Österreich und Europa.",images:["/wientransport-van.jpg"]},
+  robots: { index: true, follow: true, googleBot:{index:true,follow:true,"max-image-preview":"large","max-snippet":-1} }
 };
 
 const schema = {
   "@context":"https://schema.org",
   "@type":["MovingCompany","LocalBusiness"],
   name:"Wien Transport",
+  legalName:"Ali Arslan KG",
   url:"https://wientransport.at/",
-  telephone:"+436608624444",
+  telephone:"+43 660 862 44 44",
   email:"aa66tx@gmail.com",
+  image:"https://wientransport.at/wientransport-van.jpg",
   address:{"@type":"PostalAddress","streetAddress":"Tokiostraße 3/1/14","postalCode":"1220","addressLocality":"Wien","addressCountry":"AT"},
-  areaServed:["Wien","Österreich","Europa"],
+  areaServed:[{"@type":"City","name":"Wien"},{"@type":"Country","name":"Österreich"},{"@type":"Place","name":"Europa"}],
+  priceRange:"€€",
   openingHours:"Mo-Su 00:00-23:59",
-  serviceType:["Transport Wien","Umzug Wien","Möbeltransport Wien","Kleintransport Wien","Möbelmontage","Entrümpelung","Pakettransport","Kurierdienst"]
+  hasOfferCatalog:{"@type":"OfferCatalog",name:"Transportleistungen",itemListElement":["Umzug Wien","Möbeltransport Wien","Kleintransport Wien","Möbelmontage Wien","Firmenumzug Wien","Entrümpelung Wien"].map(name=>({"@type":"Offer",itemOffered:{"@type":"Service",name}}))}
 };
 
 export default function RootLayout({children}) {
