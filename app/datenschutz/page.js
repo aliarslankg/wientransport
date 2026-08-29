@@ -5,7 +5,7 @@ export const metadata = {
   description:
     "Datenschutzhinweise von Wien Transport zur Kontaktaufnahme per Telefon, E-Mail, WhatsApp und über die Website.",
   alternates: {
-    canonical: "https://wientransport.at/datenschutz",
+    canonical: "https://www.wientransport.at/datenschutz",
   },
   robots: {
     index: true,
