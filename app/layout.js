@@ -32,7 +32,24 @@ const schema = {
   areaServed:[{"@type":"City","name":"Wien"},{"@type":"Country","name":"Österreich"},{"@type":"Place","name":"Europa"}],
   priceRange:"€€",
   openingHours:"Mo-Su 00:00-23:59",
-  hasOfferCatalog:{"@type":"OfferCatalog",name:"Transportleistungen",itemListElement":["Umzug Wien","Möbeltransport Wien","Kleintransport Wien","Möbelmontage Wien","Firmenumzug Wien","Entrümpelung Wien"].map(name=>({"@type":"Offer",itemOffered:{"@type":"Service",name}}))}
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Transportleistungen",
+    itemListElement: [
+      "Umzug Wien",
+      "Möbeltransport Wien",
+      "Kleintransport Wien",
+      "Möbelmontage Wien",
+      "Firmenumzug Wien",
+      "Entrümpelung Wien"
+    ].map(serviceName => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: serviceName
+      }
+    }))
+  }
 };
 
 export default function RootLayout({children}) {
