@@ -1,15 +1,15 @@
 import "./globals.css";
 
 export const metadata = {
-  metadataBase: new URL("https://wientransport.at"),
+  metadataBase: new URL("https://www.wientransport.at"),
   title: { default:"Umzug Wien & Möbeltransport | Wien Transport", template:"%s | Wien Transport" },
   description: "Wien Transport: Umzug Wien, Möbeltransport, Kleintransport, Möbelmontage und Entrümpelung in Wien, Österreich und Europa. Unverbindlich anfragen.",
   keywords: ["Umzug Wien","Möbeltransport Wien","Kleintransport Wien","Möbeltaxi Wien","Kurierdienst Wien","Pakettransport Wien","Firmenumzug Wien","Möbelmontage Wien"],
-  alternates: { canonical: "https://wientransport.at/", languages: { "de-AT":"https://wientransport.at/", en:"https://wientransport.at/en", tr:"https://wientransport.at/tr", ru:"https://wientransport.at/ru", ar:"https://wientransport.at/ar", "x-default":"https://wientransport.at/" } },
+  alternates: { canonical: "https://www.wientransport.at/", languages: { "de-AT":"https://www.wientransport.at/", en:"https://www.wientransport.at/en", tr:"https://www.wientransport.at/tr", ru:"https://www.wientransport.at/ru", ar:"https://www.wientransport.at/ar", "x-default":"https://www.wientransport.at/" } },
   openGraph: {
     title: "Wien Transport – Umzug, Möbeltransport & Kleintransport",
     description: "Umzug, Möbeltransport, Kleintransport und ergänzende Leistungen in Wien, Österreich und Europa.",
-    url: "https://wientransport.at/",
+    url: "https://www.wientransport.at/",
     siteName: "Wien Transport",
     locale:"de_AT",
     images: [{ url: "/wientransport-van.jpg", width: 900, height: 560, alt: "Wien Transport Fahrzeug für Umzug und Möbeltransport" }],
@@ -24,10 +24,10 @@ const schema = {
   "@type":["MovingCompany","LocalBusiness"],
   name:"Wien Transport",
   legalName:"Ali Arslan KG",
-  url:"https://wientransport.at/",
+  url:"https://www.wientransport.at/",
   telephone:"+43 660 862 44 44",
   email:"aa66tx@gmail.com",
-  image:"https://wientransport.at/wientransport-van.jpg",
+  image:"https://www.wientransport.at/wientransport-van.jpg",
   address:{"@type":"PostalAddress","streetAddress":"Tokiostraße 3/1/14","postalCode":"1220","addressLocality":"Wien","addressCountry":"AT"},
   areaServed:[{"@type":"City","name":"Wien"},{"@type":"Country","name":"Österreich"},{"@type":"Place","name":"Europa"}],
   priceRange:"€€",
