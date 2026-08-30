@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const phone = "436608624444";
-const email = "aa66tx@gmail.com";
+const email = "info@wientransport.at";
 
 export default function ServicePage({eyebrow,title,intro,points=[],sections=[],faqs=[]}){
  const whatsapp=`https://wa.me/${phone}?text=${encodeURIComponent(`Hallo Wien Transport, ich interessiere mich für: ${title}`)}`;
