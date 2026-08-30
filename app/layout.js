@@ -26,7 +26,7 @@ const schema = {
   legalName:"Ali Arslan KG",
   url:"https://www.wientransport.at/",
   telephone:"+43 660 862 44 44",
-  email:"aa66tx@gmail.com",
+  email:"info@wientransport.at",
   image:"https://www.wientransport.at/wientransport-van.jpg",
   address:{"@type":"PostalAddress","streetAddress":"Tokiostraße 3/1/14","postalCode":"1220","addressLocality":"Wien","addressCountry":"AT"},
   areaServed:[{"@type":"City","name":"Wien"},{"@type":"Country","name":"Österreich"},{"@type":"Place","name":"Europa"}],

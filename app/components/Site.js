@@ -120,7 +120,7 @@ export default function Site({lang="de"}) {
     </section>
 
     <section id="quote" className="quote">
-      <div className="quoteLead"><p className="eyebrow">ANGEBOT</p><h2>{t.quote}</h2><p>{quoteLead[0]}</p><div className="quoteContact"><b>{quoteLead[1]}</b><a href="tel:+436608624444">+43 660 862 44 44</a><a href="mailto:aa66tx@gmail.com">aa66tx@gmail.com</a></div></div>
+      <div className="quoteLead"><p className="eyebrow">ANGEBOT</p><h2>{t.quote}</h2><p>{quoteLead[0]}</p><div className="quoteContact"><b>{quoteLead[1]}</b><a href="tel:+436608624444">+43 660 862 44 44</a><a href="mailto:info@wientransport.at">info@wientransport.at</a></div></div>
       <QuoteForm t={t} phone={phone} lang={lang}/>
     </section>
 
@@ -146,7 +146,7 @@ export default function Site({lang="de"}) {
 
     <footer id="contact">
       <div><b>WIEN TRANSPORT</b><p>Tokiostraße 3/1/14<br/>1220 Wien<br/>Österreich</p></div>
-      <div><b>Kontakt</b><a href="tel:+436608624444">+436608624444</a><a href="mailto:aa66tx@gmail.com">aa66tx@gmail.com</a><a href={`https://wa.me/${phone}`} target="_blank" rel="noreferrer">WhatsApp</a></div>
+      <div><b>Kontakt</b><a href="tel:+436608624444">+436608624444</a><a href="mailto:info@wientransport.at">info@wientransport.at</a><a href={`https://wa.me/${phone}`} target="_blank" rel="noreferrer">WhatsApp</a></div>
       <div><b>Service</b><p>Anfragen 24/7<br/>Transporte nach Verfügbarkeit<br/>Wien · Österreich · Europa</p><Link href="/ueber-uns">Über uns</Link><Link href="/impressum">Impressum</Link><Link href="/datenschutz">Datenschutz</Link><Link href="/agb">AGB</Link></div>
     </footer>
     <a className="float" href={`https://wa.me/${phone}`} target="_blank" rel="noreferrer">WhatsApp</a>

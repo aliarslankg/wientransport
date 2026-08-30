@@ -134,8 +134,8 @@ export default function Page() {
         </p>
         <p>
           E-Mail:{" "}
-          <a href="mailto:aa66tx@gmail.com">
-            aa66tx@gmail.com
+          <a href="mailto:info@wientransport.at">
+            info@wientransport.at
           </a>
         </p>
         <p>
