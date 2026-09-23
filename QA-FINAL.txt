@@ -1,6 +1,6 @@
 Final QA:
-- Phone number everywhere: +436608624444
-- WhatsApp target: 436608624444
+- Phone number everywhere: +436602660066
+- WhatsApp target: 436602660066
 - 5 language routes: DE/EN/TR/RU/AR
 - Form placeholders/options translated
 - Coverage, price, parcel hint and final CTA translated

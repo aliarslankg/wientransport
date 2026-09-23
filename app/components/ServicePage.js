@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-const phone = "436608624444";
+const phone = "436602660066";
 const email = "info@wientransport.at";
 
 export default function ServicePage({eyebrow,title,intro,points=[],sections=[],faqs=[]}){
  const whatsapp=`https://wa.me/${phone}?text=${encodeURIComponent(`Hallo Wien Transport, ich interessiere mich für: ${title}`)}`;
  const faqSchema=faqs.length?{"@context":"https://schema.org","@type":"FAQPage",mainEntity:faqs.map(([q,a])=>({"@type":"Question",name:q,acceptedAnswer:{"@type":"Answer",text:a}}))}:null;
- const serviceSchema={"@context":"https://schema.org","@type":"Service",name:title,description:intro,provider:{"@type":"MovingCompany",name:"Wien Transport",telephone:"+43 660 862 44 44",email,address:{"@type":"PostalAddress",streetAddress:"Tokiostraße 3/1/14",postalCode:"1220",addressLocality:"Wien",addressCountry:"AT"}},areaServed:["Wien","Österreich","Europa"]};
+ const serviceSchema={"@context":"https://schema.org","@type":"Service",name:title,description:intro,provider:{"@type":"MovingCompany",name:"Wien Transport",telephone:"+43 660 266 00 66",email,address:{"@type":"PostalAddress",streetAddress:"Tokiostraße 3/1/14",postalCode:"1220",addressLocality:"Wien",addressCountry:"AT"}},areaServed:["Wien","Österreich","Europa"]};
 
  return <main>
   <header><Link className="brand" href="/"><span>WT</span><div><b>WIEN TRANSPORT</b><small>UMZUG · TRANSPORT · KURIER</small></div></Link><nav><Link href="/">Startseite</Link><Link href="/#services">Leistungen</Link><Link href="/#preise">Preise</Link><Link href="/#quote">Anfrage</Link><Link href="/#contact">Kontakt</Link></nav></header>
