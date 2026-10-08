@@ -131,6 +131,11 @@ export default function Site({lang="de"}) {
       </div>
     </section>
 
+    <section className="section reviewSection">
+      <div className="head"><div><p className="eyebrow">GOOGLE</p><h2>Kundenerfahrungen & Vertrauen</h2></div><p>Nach einem abgeschlossenen Auftrag können Kundinnen und Kunden ihre ehrliche Erfahrung direkt bei Google teilen.</p></div>
+      <div className="reviewActions"><a className="primary" href="https://www.google.com/search?q=Wien+Transport" target="_blank" rel="noopener noreferrer">Wien Transport bei Google ansehen</a><a className="secondary" href="#quote">Angebot anfragen</a></div>
+    </section>
+
 
     <section className="finalCta">
       <div>
@@ -147,7 +152,7 @@ export default function Site({lang="de"}) {
     <footer id="contact">
       <div><b>WIEN TRANSPORT</b><p>Tokiostraße 3/1/14<br/>1220 Wien<br/>Österreich</p></div>
       <div><b>Kontakt</b><a href="tel:+436602660066">+436602660066</a><a href="mailto:info@wientransport.at">info@wientransport.at</a><a href={`https://wa.me/${phone}`} target="_blank" rel="noreferrer">WhatsApp</a></div>
-      <div><b>Service</b><p>Anfragen 24/7<br/>Transporte nach Verfügbarkeit<br/>Wien · Österreich · Europa</p><Link href="/ueber-uns">Über uns</Link><Link href="/impressum">Impressum</Link><Link href="/datenschutz">Datenschutz</Link><Link href="/agb">AGB</Link></div>
+      <div><b>Service</b><p>Mo–Sa 08:30–18:00<br/>Transporte nach Verfügbarkeit<br/>Wien · Österreich · Europa</p><Link href="/ueber-uns">Über uns</Link><Link href="/impressum">Impressum</Link><Link href="/datenschutz">Datenschutz</Link><Link href="/agb">AGB</Link></div>
     </footer>
     <a className="float" href={`https://wa.me/${phone}`} target="_blank" rel="noreferrer">WhatsApp</a>
   </main>

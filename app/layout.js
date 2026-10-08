@@ -31,7 +31,7 @@ const schema = {
   address:{"@type":"PostalAddress","streetAddress":"Tokiostraße 3/1/14","postalCode":"1220","addressLocality":"Wien","addressCountry":"AT"},
   areaServed:[{"@type":"City","name":"Wien"},{"@type":"Country","name":"Österreich"},{"@type":"Place","name":"Europa"}],
   priceRange:"€€",
-  openingHours:"Mo-Su 00:00-23:59",
+  openingHours:"Mo-Sa 08:30-18:00",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Transportleistungen",
